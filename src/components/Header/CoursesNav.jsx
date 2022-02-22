@@ -1,4 +1,4 @@
-import Item from "../Courses/Item";
+import Item from "../../screens/Courses/Item";
 
 
 export default function CoursesNav() {

@@ -4,7 +4,7 @@ export default function Layouts() {
   return (
     <>
       <nav className="nav-link">
-      <img src={require("./PNG.png")} width="90px"/>
+      <img src={require("../../assets/img/PNG.png")} width="90px"/>
         <ul>
           <li>
             <Link to="/">Home</Link>

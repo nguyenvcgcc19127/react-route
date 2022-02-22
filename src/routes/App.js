@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layouts from './components/Header/Layouts';
-import Blogs from './components/Header/Blogs';
-import Contact from './components/Header/Contact';
-import Home from './components/Header/Home';
-import NoPage from './components/Header/NoPage';
-import CoursesNav from './components/Header/CoursesNav';
-import "./App.css";
-import CourseDetail from './components/Courses/CourseDetail';
+import Layouts from '../components/Header/Layouts';
+import Blogs from '../components/Header/Blogs';
+import Contact from '../components/Header/Contact';
+import Home from '../components/Header/Home';
+import NoPage from '../components/Header/NoPage';
+import CoursesNav from '../components/Header/CoursesNav';
+import "../App.css";
+import CourseDetail from '../screens/Courses/CourseDetail';
 
 export default function App() {
   return (
