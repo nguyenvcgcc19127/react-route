@@ -11,7 +11,7 @@ export default function Item(){
 
     useEffect(async ()=>{
         const savedFavCourse = localStorage.getItem('id');
-        savedFavCourse === null ? setFav([]) : setFav(JSON.parse[savedFavCourse])
+        savedFavCourse === null ? setFav([]) : setFav(JSON.parse(savedFavCourse))
     }, [])
 
     const addToFavCourse = (favCourse) => {
@@ -33,6 +33,7 @@ export default function Item(){
             <div className="row">              
                 {
                     Data.course.map((val, index) => {
+                        console.log( fav)
                         return (
                             <div className="col-lg-4 column">
                                 <div className="card">
@@ -45,13 +46,13 @@ export default function Item(){
                                         <p>Giờ học: { val.time }</p>
                                         <div>
                                             <Button href={ "course-detail/" + val.id + "/" + val.slug + ".html" }>Chi tiết</Button>
-                                            {/* {
-                                                fav.length === 0 ?
-                                                    <Button onClick={() => handleClick(val.id)}>Add to favorite </Button> :
-                                                fav.include(val.id) ?
-                                                    <Button onClick={() => handleClick(val.id)} style={{color: "red"}}>Add to favorite </Button> : 
+                                            {
+                                                fav?.length === null ?
+                                                    <Button onClick={() => handleClick(val.id)}>Add to favorite</Button> :
+                                                fav?.includes(val.id) ?
+                                                    <Button onClick={() => handleClick(val.id)} style={{color: "red"}}>Unfavorite </Button> : 
                                                 <Button onClick={() => handleClick(val.id)}>Add to favorite </Button>
-                                            } */}
+                                            }
                                         </div>  
                                         
                                     </div>
@@ -62,5 +63,6 @@ export default function Item(){
                 }
             </div>
         </div>
+        
     );
 }

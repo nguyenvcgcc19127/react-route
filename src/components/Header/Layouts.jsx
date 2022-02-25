@@ -1,5 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
-
+import StickyFooter from "../Footer/Footer";
 export default function Layouts() {
   return (
     <>

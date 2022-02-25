@@ -1,0 +1,32 @@
+.footer{
+    padding: 1px;
+    background-color: rgb(8, 8, 8);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+.footer-item{
+    padding: 25px;
+    background-color: rgb(255, 74, 0);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+.text a{
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+text a:hover {
+  background-color: #1999;
+}
+
+.text-center{
+  text-align: center;
+  color: white;
+}
