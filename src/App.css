@@ -14,7 +14,7 @@ nav {
   justify-content:  space-around;
   align-items: center;
   min-height: 10vh;
-  background: rgb(48, 200, 255);
+  background: rgb(255, 74, 0);
   color: white;
 }
 
@@ -70,6 +70,7 @@ body {
   padding-top: 20px;
   padding-left: 25px;
   padding-right: 25px;
+  padding-bottom: 20px;
 }
 
 /* Remove extra left and right margins, due to padding */
@@ -137,4 +138,13 @@ body {
   font-size: 17px;
   font-weight: 700;
   color: rgba(0,0,0,.54);
+}
+
+.icon{
+  padding-left: 150px;
+}
+
+.icon-item{
+  padding-left: 150px;
+  color: red;
 }

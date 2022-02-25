@@ -7,6 +7,9 @@ import NoPage from '../components/Header/NoPage';
 import CoursesNav from '../components/Header/CoursesNav';
 import "../App.css";
 import CourseDetail from '../screens/Courses/CourseDetail';
+import FavoriteCourse from '../screens/Courses/FavoriteCourse';
+import FooterPage from '../components/Footer/FooterPage';
+
 
 export default function App() {
   return (
@@ -16,9 +19,13 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="courses" element={<CoursesNav />} />
           <Route exact path="course-detail/:id/:slug.html" element={<CourseDetail/>} />
+          <Route path="favorite-course" element={<FavoriteCourse />} />
           <Route path="blogs" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} />
+        </Route>
+        <Route path="/" element={<FooterPage />}>
+          
         </Route>
       </Routes>
     </BrowserRouter>

@@ -5,9 +5,7 @@ import Data from './education.json';
 export default function CourseDetail(){
     const params = useParams();
     const pid = params.id;
-
     
-
     return (
         <div className='container'>
             <div className="row">
@@ -36,7 +34,6 @@ export default function CourseDetail(){
                                                 <div >
                                                     <h2>Giáo trình</h2>
                                                     <ul>
-                                                        
                                                         {val.details.map((e, index) => {
                                                             return (
                                                                 <li>
