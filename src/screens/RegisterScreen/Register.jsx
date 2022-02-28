@@ -66,7 +66,7 @@ export default function Register() {
             } 
         } else {
             setSubmitted(true)
-            navigate('/');
+            navigate('/login');
             console.log(e);
         } 
         
