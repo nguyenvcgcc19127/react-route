@@ -1,5 +1,4 @@
 import { Outlet, Link } from "react-router-dom";
-import StickyFooter from "../Footer/Footer";
 export default function Layouts() {
   return (
     <>
@@ -19,6 +18,9 @@ export default function Layouts() {
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
+        <p>
+          <Link to="/register">Đăng ký</Link>/<Link to="/login">Đăng nhập</Link>
+        </p>
       </nav>
       <Outlet />
     </>

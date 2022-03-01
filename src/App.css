@@ -100,14 +100,7 @@ body {
   padding: 16px;
   text-align: center;
   background-color: #f1f1f1;
-}
-
-.card2 {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: px;
-  text-align: center;
-  background-color: #e4e1e1;
-  margin: 20px;
+  border-radius: 5%;
 }
 
 
@@ -141,11 +134,13 @@ body {
   color: rgba(0,0,0,.54);
 }
 
-.icon{
-  padding-left: 150px;
-}
-
-.icon-item{
-  padding-left: 150px;
-  color: red;
+.container-item1{
+  background: linear-gradient(to bottom, #fcfbfa, #ffffff);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  justify-content: center;
+  align-items: center;
 }

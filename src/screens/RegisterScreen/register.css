@@ -13,7 +13,8 @@
 .p1{
     font-style: italic;
     font-size: 15px;
- }
+
+}
 
 .app-wrapper{
     background-color: white;
@@ -25,7 +26,7 @@
 }
 
 .container-item{
-    background: linear-gradient(135deg, #f5ae6b, #f85307);
+    background: linear-gradient(to right, #f5ae6b, #f85307);
     width: 100%;
     min-height: 100vh;
     display: flex;

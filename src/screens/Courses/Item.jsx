@@ -2,7 +2,6 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Data from './education.json'
 import { useState, useEffect } from 'react';
-
 import "../../App.css";
 
 export default function Item(){

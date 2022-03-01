@@ -3,6 +3,7 @@ import './register.css';
 import { useState } from "react";
 import isEmail from "validator/lib/isEmail";
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 export default function Register() {
     // States for registration
@@ -123,7 +124,7 @@ export default function Register() {
 
                     <button onSubmit={handleSubmit} className="submit">Đăng ký</button>
                     <p className="text text-item">
-                        Bạn đã có tài khoản? <a href="#">Đăng nhập</a>
+                        Bạn đã có tài khoản? <Link to="/login">Đăng nhập</Link>
                     </p>
                 </form>
             </div>     

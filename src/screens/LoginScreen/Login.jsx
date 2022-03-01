@@ -2,7 +2,7 @@ import * as React from "react";
 import './login.css';
 import { useState } from "react";
 import isEmail from "validator/lib/isEmail";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Register() {   
     const navigate = useNavigate(); 
@@ -75,7 +75,7 @@ export default function Register() {
 
                     <button onSubmit={handleSubmit} className="submit">Đăng nhập</button>
                     <p className="text text-item">
-                        Bạn chưa có tài khoản? <a href="#">Đăng ký</a>
+                        Bạn chưa có tài khoản? <Link to="/register">Đăng ký</Link>
                     </p>
                 </form>
             </div>     
