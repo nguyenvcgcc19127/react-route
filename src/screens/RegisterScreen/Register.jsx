@@ -43,38 +43,39 @@ export default function Register() {
     };
     
     // Handling the form submission
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const validateAll = () => {
         const msg = {}
         console.log(name, email, phone, password)
-        if(name === '' || email === '' || phone === '' || password === ''){
-            if (name === '') {
-                msg.name = "Vui lòng nhập họ và tên!"
-            } if (email === '') {
-                msg.email = "Vui lòng nhập email!"
-            } else if (!isEmail(email)) {
-                msg.email = "Email không đúng!"
-            } if (password === '') {
-                msg.password = "Vui lòng nhập mật khẩu!"
-                
-            } else if(password.length < 8 || password.length > 16){
-                msg.password = "Giới hạn mật khẩu là từ 8 đến 16 ký tự!"
-            } if (phone === '') {
-                msg.phone = "Vui lòng nhập số điện thoại!"
-                
-            } else if (phone.length < 10 || phone.length > 11){
-                msg.phone = "Số điện thoại phải là 10 số!"
-            } 
-        } else {
-            setSubmitted(true)
-            navigate('/login');
-            console.log(e);
+        if (name === '') {
+            msg.name = "Vui lòng nhập họ và tên!"
+        } if (email === '') {
+            msg.email = "Vui lòng nhập email!"
+        } else if (!isEmail(email)) {
+            msg.email = "Email không đúng!"
+        } if (password === '') {
+            msg.password = "Vui lòng nhập mật khẩu!"
+        } else if(password.length < 8 || password.length > 16){
+            msg.password = "Mật khẩu phải từ 8 đến 16 ký tự!"
+        } if (phone === '') {
+            msg.phone = "Vui lòng nhập số điện thoại!"
+        } else if (phone.length < 10 || phone.length >= 11){
+            msg.phone = "Số điện thoại phải là 10 số!"
         } 
+            
         
+
         setErrMessage(msg)
         if (Object.keys(msg).length > 0) return false
         else return true
     };
+
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+        const isValid = validateAll(e)
+        if (!isValid) return 
+        setSubmitted(true)
+        navigate('/login')
+    }
     
     return (
         <div className="container-item">
